@@ -1,21 +1,24 @@
+import Navbar from './Components/Navbar';
+import Cart from './Pages/Cart';
+import Contact from './Pages/Contact';
+import Detail from './Pages/Detail';
+import Home from './Pages/Home';
 import './Styles/App.css'
 
-import Home from './Components/Home';
-import Navbar from './Components/Navbar';
-import Form from './Components/Form';
-import DogFech from './Components/DogFech';
-import CatAxios from './Components/CatAxios';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
 
   return (
     <>
-    {/* <DogFech/>
-    <CatAxios/> */}
-
-     <Navbar/>
-     <Form/>
-     <Home/>
+    <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/cart' element={<Cart/>} />
+        <Route path='/detail/:id' element={<Detail/>} />
+        <Route path='*' element={<h1>Error 404 - Page not found</h1>} />
+      </Routes>
     </>
   );
 }

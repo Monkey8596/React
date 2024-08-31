@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../Components/Card";
 import { pizzas } from "../Utils/pizzas";
 import { useEffect, useState } from "react";
 import axios from 'axios'
@@ -30,16 +30,6 @@ const Home = () =>{
 
     return (
         <>
-        {/* {cart.length >0 &&(
-            <>
-            <h2>Pedidos a Entregar</h2>
-            <ul>
-                {cart.map((pedido) => (
-                    <li key={pedido.id}> {pedido.tipo} </li>
-                    ))}
-            </ul>
-            </>
-        )} */}
         <h1 style={titleStyles}>Lista de Recetas</h1>
         <div className="list-container">
             {recipes.map( (recipe) => (
